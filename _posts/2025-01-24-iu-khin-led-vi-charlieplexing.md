@@ -104,4 +104,14 @@ Wellll, kỹ thuật này thực sự rất tốt, nhưng chưa đủ tốt vớ
 
 # Điều khiển nhiều LED với charlieplexing
 
-*Còn tiếp*
+OK, quay lại với ma trận LED hồi nãy. Nhưng bây giờ mình sẽ dùng chính các chân điều khiển cột (C1, C2, C3, C4) để điều khiển hàng luôn (!?):
+
+![alt text](/assets/2025-04-22-charlie_matrix.png)
+
+What ?! Cảm giác có gì đó sai sai... Thôi thì mình liệt kê luôn mấy vấn đề sẽ xảy ra:
+
+1. Các LED ở đường chéo sẽ không sáng. Lý do rất đơn giản: Các LED ấy có chân anode và cathode có điện thế bằng nhau (vì cùng nối tới một net). Điện thế bằng nhau => không có chênh lệch điện thế => **không có dòng điện** chạy qua LED. Đó là lý do chúng không bao giờ sáng được.
+
+	![alt text](/assets/2025-04-22-charlie_matrix_crossline.png)
+
+2. 
